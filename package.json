@@ -29,6 +29,5 @@
     "typescript-eslint": "^8.18.2",
     "vite": "^6.0.5",
     "vitest-browser-react": "^0.0.4"
-  },
-  "packageManager": "pnpm@10.0.0"
+  }
 }

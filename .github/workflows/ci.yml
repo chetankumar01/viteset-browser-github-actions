@@ -16,22 +16,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-
       - name: Set node version to 20
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
       - name: Install
-        run: pnpm i
+        run: npm install
 
       - name: Install Playwright Dependencies
-        run: pnpm exec playwright install chromium --with-deps
+        run: npx playwright install chromium --with-deps
 
       - name: Build
-        run: pnpm run build
+        run: npm run build
 
       - name: Test
-        run: pnpm run test:browser
+        run: npm run test:browser
